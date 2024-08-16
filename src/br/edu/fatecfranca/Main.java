@@ -10,5 +10,7 @@ public class Main {
         meuCarro.frear(30);
 
         carroTop.acelerar(40);
+
+        System.out.println(meuCarro.toString());
     }
 }

@@ -27,7 +27,9 @@ public class Carro {
         System.out.println(this.modelo + " não pode frear negativamente.");
     }
 
-    public String ToString() {
-        return this.marca + "\n" + this.modelo + "\n" + this.cor + "\n" + this.ano + "\n";
+    public String toString() {
+        return "Marca: " + this.marca + "\n" + "Modelo: " + this.modelo +
+        "\n" + "Cor: " + this.cor + "\n" + "Ano: " + this.ano + "\n" +
+        "Velocidade Atual: " + this.velAtual + "\n";
     }
 }
