@@ -1,10 +1,10 @@
 package br.edu.fatecfranca;
 
 public class Produto {
-    int id;
-    String descricao;
-    int qtde;
-    float preco;
+    public int id;
+    public String descricao;
+    public int qtde;
+    public float preco;
 
     public Produto(int id, String descricao, int qtde, float preco) {
         this.id = id;

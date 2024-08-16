@@ -3,14 +3,15 @@ package br.edu.fatecfranca; // Para auto-organizar, basta digitar o nome do paco
 
 public class Main {
     public static void main(String[] args) {
-        Carro meuCarro = new Carro("Fiat", "Uno","Prata",2009, 60.4F);
-        Carro carroTop = new Carro("Toyota","Corolla","Cinza",2013, 80.8F);
+        Carro meuCarro = new Carro("Fiat", "Uno","Prata",2009, 0F);
+        Carro carroTop = new Carro("Toyota","Corolla","Cinza",2013, 0F);
 
-        meuCarro.acelerar(10);
-        meuCarro.frear(30);
+        meuCarro.acelerar(60);
+        meuCarro.frear(10);
 
-        carroTop.acelerar(40);
+        carroTop.acelerar(95);
+        carroTop.frear(5);
 
-        System.out.println(meuCarro.toString());
+        System.out.println(meuCarro);
     }
 }

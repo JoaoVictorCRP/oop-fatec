@@ -6,7 +6,7 @@ public class Cliente {
     String nome;
     float saldo = 0.0F;
 
-    Cliente(int numeroConta, int numeroAgencia, String nome) {
+    public Cliente(int numeroConta, int numeroAgencia, String nome) {
         this.numeroConta = numeroConta;
         this.numeroAgencia = numeroAgencia;
         this.nome = nome;

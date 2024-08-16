@@ -1,4 +1,5 @@
-package br.edu.fatecfranca;
+package br.edu.fatecfranca.teste;
+import br.edu.fatecfranca.Produto;
 
 public class TestaProduto {
     public static void main(String[] args) {

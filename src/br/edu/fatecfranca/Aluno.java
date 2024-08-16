@@ -1,13 +1,13 @@
 package br.edu.fatecfranca;
 
 public class Aluno {
-    int numeroAluno;
-    String nome;
-    int idade;
-    double p1, p2;
+    public int numeroAluno;
+    public String nome;
+    public int idade;
+    public double p1, p2;
     boolean aprovado=false;
 
-    Aluno(int numeroAluno, String nome, int idade){
+    public Aluno(int numeroAluno, String nome, int idade){
         this.numeroAluno = numeroAluno;
         this.nome = nome;
         this.idade = idade;

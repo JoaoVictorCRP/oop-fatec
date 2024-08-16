@@ -5,3 +5,6 @@
 Ex:
 JavaScript:`acelerar()`
 Java: `Carro.acelerar()` (Isto é, se a classe previamente criada Carro tiver o método acelerar)
+
+## Boas práticas
+- Não faça nenhum print dentro da classe, ao invés disso retorne String, isso aumenta a flexibilidade da classe.

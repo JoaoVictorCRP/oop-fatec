@@ -1,4 +1,5 @@
-package br.edu.fatecfranca;
+package br.edu.fatecfranca.teste;
+import br.edu.fatecfranca.Rio;
 
 public class TestaRio {
     public static void main(String[] args) {
