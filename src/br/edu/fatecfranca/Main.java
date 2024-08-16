@@ -1,17 +1,17 @@
 package br.edu.fatecfranca; // Para auto-organizar, basta digitar o nome do pacote, passar o mouse e clicar em
                             // "move package to {nome_do pacote}
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
         Carro meuCarro = new Carro("Fiat", "Uno","Prata",2009, 0F);
         Carro carroTop = new Carro("Toyota","Corolla","Cinza",2013, 0F);
 
-        meuCarro.acelerar(60);
-        meuCarro.frear(10);
+        // JOptionPane nos oferece uma interface gráfica para inserções.
+        String x = JOptionPane.showInputDialog("Quanto você deseja acelerar?");
+        meuCarro.acelerar(Float.parseFloat(x));
+        meuCarro.frear(5);
 
-        carroTop.acelerar(95);
-        carroTop.frear(5);
-
-        System.out.println(meuCarro);
+        JOptionPane.showMessageDialog(null, meuCarro);
     }
 }
