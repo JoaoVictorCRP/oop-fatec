@@ -1,6 +1,8 @@
 package br.edu.fatecfranca.teste;
 import br.edu.fatecfranca.Produto;
 
+import javax.swing.*;
+
 public class TestaProduto {
     public static void main(String[] args) {
         Produto p1 = new Produto(1,"Notebook", 400, 2500);
@@ -21,7 +23,7 @@ public class TestaProduto {
         p2.descer(100);
 
 
-        p1.mostra();
-        p2.mostra();
+        JOptionPane.showMessageDialog(null, p1);
+        JOptionPane.showMessageDialog(null, p2);
     }
 }

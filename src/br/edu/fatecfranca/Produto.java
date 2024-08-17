@@ -32,12 +32,12 @@ public class Produto {
         this.preco = this.preco-x;
     }
 
-    public void mostra() {
-        System.out.print(
+    @Override
+    public String toString() {
+        return
                 "\nID: " + this.id +
                 "\nDescrição: " + this.descricao +
                 "\nQuantidade: " + this.qtde +
-                "\nPreço: R$" + this.preco
-        );
+                "\nPreço: R$" + this.preco;
     }
 }
