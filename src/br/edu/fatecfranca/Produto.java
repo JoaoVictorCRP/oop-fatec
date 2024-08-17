@@ -1,9 +1,8 @@
 package br.edu.fatecfranca;
 
 public class Produto {
-    public int id;
+    public int id, qtde;
     public String descricao;
-    public int qtde;
     public float preco;
 
     public Produto(int id, String descricao, int qtde, float preco) {
@@ -17,6 +16,10 @@ public class Produto {
     }
 
     public void vender(int x) {
+        if(this.qtde<=0){
+            System.out.println("Estoque não pode ser negativo.");
+            return;
+        }
         this.qtde = this.qtde-x;
     }
 

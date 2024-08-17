@@ -24,7 +24,8 @@ public class Cliente {
         this.saldo -= valor;
     }
 
-    public String dadosCliente() {
-        return "Nome: " + this.nome + "\nNº da Conta: " + this.numeroConta + "\nSaldo: " + this.saldo;
+    @Override
+    public String toString() {
+        return "Nome: " + this.nome + "\nNº da Conta: " + this.numeroConta + "\nSaldo: R$" + this.saldo;
     }
 }

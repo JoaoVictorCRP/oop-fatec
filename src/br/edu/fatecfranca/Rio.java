@@ -28,7 +28,8 @@ public class Rio {
         this.poluido = true;
     }
 
-    public void mostra(){
-        System.out.printf("\nNome do Rio: %s\nNivel: %.2f\nPoluido: %s", this.nome, this.nivel, this.poluido);
+    public String toString(){
+        return "\nNome do Rio: " + this.nome +
+        "\nNivel: " + this.nivel + "\nPoluído: " + this.poluido;
     }
 }

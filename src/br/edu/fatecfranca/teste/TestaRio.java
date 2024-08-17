@@ -1,6 +1,8 @@
 package br.edu.fatecfranca.teste;
 import br.edu.fatecfranca.Rio;
 
+import javax.swing.*;
+
 public class TestaRio {
     public static void main(String[] args) {
         Rio rio1 = new Rio("de Piracicaba", 90.2F); // O rio de piracicaba vai jogar água pra fora?
@@ -21,7 +23,7 @@ public class TestaRio {
         rio1.sujar();
         rio2.sujar();
 
-        rio1.mostra();
-        rio2.mostra();
+        JOptionPane.showMessageDialog(null, rio1.toString());
+        JOptionPane.showMessageDialog(null, rio2.toString());
     }
 }
