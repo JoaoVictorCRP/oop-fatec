@@ -15,13 +15,12 @@ public class Aluno {
 
     public double notaFinal(){
         double mediaFinal = (this.p1 + this.p2) / 2;
-        if (mediaFinal > 6){
-            this.aprovado = true;
-        }
+        this.aprovado = mediaFinal > 6;
         return mediaFinal;
     }
 
-    public String dadosAluno(){
+    @Override
+    public String toString(){
         return "Nº do Aluno: " + this.numeroAluno + "\nNome do Aluno: " + this.nome + "\nIdade do Aluno: " + this.idade;
     }
 

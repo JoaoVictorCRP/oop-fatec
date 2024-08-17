@@ -1,5 +1,7 @@
-package br.edu.fatecfranca; // Para auto-organizar, basta digitar o nome do pacote, passar o mouse e clicar em
+package br.edu.fatecfranca.teste; // Para auto-organizar, basta digitar o nome do pacote, passar o mouse e clicar em
                             // "move package to {nome_do pacote}
+import br.edu.fatecfranca.Carro;
+
 import javax.swing.*;
 
 public class TestaCarro {

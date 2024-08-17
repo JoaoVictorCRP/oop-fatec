@@ -1,6 +1,8 @@
 package br.edu.fatecfranca.teste;
 import br.edu.fatecfranca.Aluno;
 
+import javax.swing.*;
+
 public class TestaAluno {
     public static void main(String[] args) {
         int numeroAluno = 1;
@@ -9,8 +11,8 @@ public class TestaAluno {
         Aluno aluno = new Aluno(numeroAluno, nome, idade);
         aluno.p1 = 8.9;
         aluno.p2 = 10;
-        System.out.println(aluno.dadosAluno());
-        System.out.println("Nota final de " + aluno.nome + ": " + aluno.notaFinal());
-        System.out.println("Passou? " + aluno.passou());
+        JOptionPane.showMessageDialog(null, aluno);
+        JOptionPane.showMessageDialog(null, "Nota final de " + aluno.nome + ": " + aluno.notaFinal());
+        JOptionPane.showMessageDialog(null, "Passou? " + aluno.passou());
     }
 }
