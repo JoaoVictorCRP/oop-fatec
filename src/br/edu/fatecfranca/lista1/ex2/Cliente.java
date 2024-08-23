@@ -1,4 +1,4 @@
-package br.edu.fatecfranca.lista1;
+package br.edu.fatecfranca.lista1.ex2;
 
 public class Cliente {
     int numeroConta;

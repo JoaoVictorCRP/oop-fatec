@@ -1,4 +1,4 @@
-package br.edu.fatecfranca.lista1;
+package br.edu.fatecfranca.lista1.ex3;
 
 public class Produto {
     public int id, qtde;

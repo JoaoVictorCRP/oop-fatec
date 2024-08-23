@@ -1,4 +1,4 @@
-package br.edu.fatecfranca.lista1;
+package br.edu.fatecfranca.lista1.ex1;
 
 public class Aluno {
     public int numeroAluno;

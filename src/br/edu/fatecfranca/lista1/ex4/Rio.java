@@ -1,4 +1,4 @@
-package br.edu.fatecfranca.lista1;
+package br.edu.fatecfranca.lista1.ex4;
 
 public class Rio {
     public String nome;

@@ -1,4 +1,4 @@
-package br.edu.fatecfranca.lista1;
+package br.edu.fatecfranca.lista1.ex0;
 
 public class Carro {
     // Declaração das variáveis

@@ -1,5 +1,4 @@
-package br.edu.fatecfranca.lista1.teste;
-import br.edu.fatecfranca.lista1.Produto;
+package br.edu.fatecfranca.lista1.ex3;
 
 import javax.swing.*;
 
