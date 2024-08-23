@@ -6,9 +6,9 @@ public class Compra {
     private String situacao = "Reprovada";
 
     public Compra(float valor, int qtde, String situacao) {
-        this.valor = valor;
-        this.qtde = qtde;
-        this.situacao = situacao;
+        this.setValor(valor);
+        this.setQtde(qtde);
+        this.setSituacao(situacao);
     }
 
     public Compra() {
