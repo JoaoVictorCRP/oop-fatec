@@ -55,11 +55,11 @@ public class Cliente {
     }
 
     public void setNome(String nome) {
-        if (nome.length()<30){
+        if (nome.length()<=30){
             this.nome = nome;
             return;
         }
-        System.out.println("Nome deve possuir menos de 30 caracteres.");
+        System.out.println("Nome não deve ultrapassar 30 caracteres.");
     }
 
     public void setSaldo(float saldo) {
