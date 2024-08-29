@@ -63,10 +63,11 @@ public class Cliente {
     }
 
     public void setSaldo(float saldo) {
-        if (saldo<0){
-            return; // Saldo não pode ser negativo
+        if (saldo>=0){
+            this.saldo=saldo;
+            return;
         }
-        this.saldo=saldo;
+        System.out.println("Saldo não pode ser negativo.");
     }
 
     public void realizarDeposito(int valor){
