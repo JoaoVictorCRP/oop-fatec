@@ -7,10 +7,10 @@ public class Cliente {
     private float saldo;
 
     Cliente(String numeroConta, String numeroAgencia, String nome, float saldo) {
-        setNumeroConta(numeroConta);
-        setNumeroAgencia(numeroAgencia);
-        setNome(nome);
-        setSaldo(saldo);
+        this.setNumeroConta(numeroConta);
+        this.setNumeroAgencia(numeroAgencia);
+        this.setNome(nome);
+        this.setSaldo(saldo);
     }
 
     Cliente(){
@@ -39,16 +39,23 @@ public class Cliente {
 
     // Setters
     public void setNumeroConta(String numeroConta) {
-        if (numeroConta.length()==8 && numeroConta.charAt(numeroConta.length()-2)=='-'){
-            this.numeroConta=numeroConta;
+        if (numeroConta.length()==8){
+            if (numeroConta.charAt(6)=='-'){
+                this.numeroConta=numeroConta;
+                return;
+            }
+            else System.out.println("Número da conta deve possuir o dígito verificador.");
             return;
         }
         System.out.println("Número da Conta é inválido!");
     }
 
     public void setNumeroAgencia(String numeroAgencia) {
-        if (numeroAgencia.length()==6 && numeroAgencia.charAt(numeroAgencia.length()-2)=='-'){
-            this.numeroAgencia=numeroAgencia;
+        if (numeroAgencia.length()==6){
+            if (numeroAgencia.charAt(4)=='-'){
+                this.numeroAgencia=numeroAgencia;
+                return;
+            } else System.out.println("Número da agência deve possuir o dígito verificador.");
             return;
         }
         System.out.println("Número da Agência é inválido!");
@@ -71,15 +78,11 @@ public class Cliente {
     }
 
     public void realizarDeposito(int valor){
-        this.saldo+=valor;
+        setSaldo(this.getSaldo()+valor);
     }
 
     public void realizarSaque(int valor){
-        if ((this.saldo-valor)<0){
-            System.out.println("Seu saldo é insuficiente!");
-            return;
-        }
-        this.saldo-=valor;
+        setSaldo(this.getSaldo()-valor);
     }
 
     @Override
