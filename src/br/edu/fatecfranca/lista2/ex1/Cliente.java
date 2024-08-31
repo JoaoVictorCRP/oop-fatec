@@ -78,11 +78,11 @@ public class Cliente {
     }
 
     public void realizarDeposito(int valor){
-        setSaldo(this.getSaldo()+valor);
+        setSaldo(this.saldo + valor);
     }
 
     public void realizarSaque(int valor){
-        setSaldo(this.getSaldo()-valor);
+        setSaldo(this.saldo - valor);
     }
 
     @Override
