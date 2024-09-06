@@ -8,3 +8,8 @@ Java: `Carro.acelerar()` (Isto é, se a classe previamente criada Carro tiver o 
 
 ## Boas práticas
 - Não faça nenhum print dentro da classe, ao invés disso retorne String, isso aumenta a flexibilidade da classe.
+
+## Agregação e Composição
+- **Agregação (independência)** = diamante em branco
+- **Composição (dependência)** = diamante preenchido
+- **CUIDADO: Quando a relacionamento com outra classe é N, indica um array (n instâncias da classe)**
