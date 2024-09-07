@@ -18,8 +18,8 @@ public class Curso {
     Curso(){}
 
     // Adicionar Disciplina
-    public void addDisciplina(int id, String name, String area, Professor professor) {
-        this.disciplinas.add(new Disciplina(id, name, area, professor));
+    public void addDisciplina(int id, String name, String sigla, Professor professor) {
+        this.disciplinas.add(new Disciplina(id, name, sigla, professor));
     }
 
     // Adicionar Aluno na disciplina

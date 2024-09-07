@@ -13,3 +13,7 @@ Java: `Carro.acelerar()` (Isto é, se a classe previamente criada Carro tiver o 
 - **Agregação (independência)** = diamante em branco
 - **Composição (dependência)** = diamante preenchido
 - **CUIDADO: Quando a relacionamento com outra classe é N, indica um array (n instâncias da classe)**
+
+## Agreg. e Compos. VS Herança
+- No conceito de herança, podemos imaginar um diagrama "é um...",
+- No conceito de agreg. e compos. a pergunta de associação "é um..." sempre será falso.
