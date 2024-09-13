@@ -3,9 +3,9 @@ package br.edu.fatecfranca.lista4.ex0;
 public class Diretor extends Funcionario {
     private float acoesEmpresa;
 
-    public Diretor(String nome,String endereco,String cpf, float salario){
+    public Diretor(String nome,String endereco,String cpf, float salario, float acoesEmpresa){
         super(nome, endereco, cpf, salario);
-        this.acoesEmpresa = 0;
+        this.acoesEmpresa = acoesEmpresa;
     }
 
     public Diretor(){}
