@@ -7,6 +7,10 @@ public class Programa {
         palco.atuar(); // Ação do ator, inicialmente feliz
         palco.plotTwist(); // Faz ator ficar triste
         palco.atuar(); // Ação do ator, que está triste após o plotTwist
+        palco.plotTwist();
+        palco.atuar();
+        palco.plotTwist();
+        palco.atuar();
     }
 }
 

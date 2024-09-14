@@ -17,3 +17,7 @@ Java: `Carro.acelerar()` (Isto é, se a classe previamente criada Carro tiver o 
 ## Agreg. e Compos. VS Herança
 - No conceito de herança, podemos imaginar um diagrama "é um...",
 - No conceito de agreg. e compos. a pergunta de associação "é um..." sempre será falso.
+
+## Polimorfismo
+- Se você não incluir um método específico na classe pai, ele não poderá ser aplicado com polimorfismo!
+- Quando uma classe ou método estiver em _itálico_, ela é abstrata
