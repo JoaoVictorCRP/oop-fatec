@@ -13,10 +13,17 @@ Java: `Carro.acelerar()` (Isto é, se a classe previamente criada Carro tiver o 
 - **Agregação (independência)** = diamante em branco
 - **Composição (dependência)** = diamante preenchido
 - **CUIDADO: Quando a relacionamento com outra classe é N, indica um array (n instâncias da classe)**
+![Composica - Carro](composicao.png)
+
 
 ## Agreg. e Compos. VS Herança
 - No conceito de herança, podemos imaginar um diagrama "é um...",
 - No conceito de agreg. e compos. a pergunta de associação "é um..." sempre será falso.
+![Heranca](heranca.png)
+
+
+## Herança
+- Atributos `protected` são privados para todas as classes, exceto as que suas filhas.
 
 ## Polimorfismo
 - Se você não incluir um método específico na classe pai, ele não poderá ser aplicado com polimorfismo!
