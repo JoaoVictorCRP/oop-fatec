@@ -1,28 +1,26 @@
-package br.edu.fatecfranca.lista5;
+package br.edu.fatecfranca.lista5.ex0;
 
-import br.edu.fatecfranca.lista5.classes.AtletaBasquete;
-import br.edu.fatecfranca.lista5.classes.AtletaFutebol;
-import br.edu.fatecfranca.lista5.classes.AtletaVolei;
-import br.edu.fatecfranca.lista5.classes.Triatleta;
+import br.edu.fatecfranca.lista5.ex0.classes.Triatleta;
+import br.edu.fatecfranca.lista5.ex0.interfaces.JogadorBasquete;
+import br.edu.fatecfranca.lista5.ex0.interfaces.JogadorFutebol;
+import br.edu.fatecfranca.lista5.ex0.interfaces.JogadorVolei;
 
 public class Main {
     public static void main(String[] args) {
-        AtletaBasquete basketballPlayer = new AtletaBasquete("Lucas Dias", "SESI Franca");
-        AtletaFutebol footballPlayer = new AtletaFutebol("Memphis Depay", "Corinthians");
-        AtletaVolei volleyPlayer = new AtletaVolei("Fernanda Garay", "Seleção Brasileira");
+        JogadorFutebol futebolista;
 
-        // Profissionais...
-        basketballPlayer.arremessar();
-        footballPlayer.baterPenalti();
-        volleyPlayer.sacar();
-
-        // Amador... (Polimorfismo aqui)
+        // Triatleta executando todos os métodos das interfaces
         Triatleta triatleta = new Triatleta("João da Silva");
         triatleta.manchete();
         triatleta.cobrarEscanteio();
         triatleta.darToco();
 
-        // Cuidado com a sobrescrição
-        volleyPlayer = new AtletaVolei("José");
+        // Quando a sobrescrição ocorrer em cima de uma variável tipada com a interface, como é o caso do futebolista,
+        // a classe só poderá executar os métodos da interface que foi tipada, e mais nenhuma outra.
+        futebolista = new Triatleta("Zé");
+        futebolista.baterPenalti();
+        futebolista.cobrarEscanteio();
+        // futebolista.manchete(); <== Isso aqui não vai dar certo!
+
     }
 }

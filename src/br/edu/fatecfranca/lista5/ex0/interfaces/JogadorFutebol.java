@@ -1,4 +1,4 @@
-package br.edu.fatecfranca.lista5.interfaces;
+package br.edu.fatecfranca.lista5.ex0.interfaces;
 
 public interface JogadorFutebol {
     public void baterPenalti();

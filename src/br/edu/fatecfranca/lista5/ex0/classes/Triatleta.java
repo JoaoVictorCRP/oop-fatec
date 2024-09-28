@@ -1,8 +1,8 @@
-package br.edu.fatecfranca.lista5.classes;
+package br.edu.fatecfranca.lista5.ex0.classes;
 
-import br.edu.fatecfranca.lista5.interfaces.JogadorBasquete;
-import br.edu.fatecfranca.lista5.interfaces.JogadorFutebol;
-import br.edu.fatecfranca.lista5.interfaces.JogadorVolei;
+import br.edu.fatecfranca.lista5.ex0.interfaces.JogadorBasquete;
+import br.edu.fatecfranca.lista5.ex0.interfaces.JogadorFutebol;
+import br.edu.fatecfranca.lista5.ex0.interfaces.JogadorVolei;
 
 public class Triatleta implements JogadorFutebol, JogadorBasquete, JogadorVolei {
     String name;
