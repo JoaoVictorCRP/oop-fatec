@@ -3,29 +3,29 @@ package br.edu.fatecfranca.lista5.classes;
 import br.edu.fatecfranca.lista5.interfaces.JogadorBasquete;
 
 public class AtletaBasquete implements JogadorBasquete {
-    public String nome;
+    public String name;
     public String time;
 
-    public AtletaBasquete(String nome, String time) {
-        this.nome = nome;
+    public AtletaBasquete(String name, String time) {
+        this.name = name;
         this.time = time;
     }
 
     public AtletaBasquete() {}
 
     public void arremessar(){
-        System.out.println(this.nome + " acaba de arremessar.");
+        System.out.println(this.name + " acaba de arremessar.");
     }
 
     @Override
     public void darToco() {
-        System.out.println(this.nome + " acaba de dar toco.");
+        System.out.println(this.name + " acaba de dar toco.");
     }
 
     @Override
     public String toString() {
         return "AtletaBasquete{" +
-                "nome='" + nome + '\'' +
+                "nome='" + name + '\'' +
                 ", time='" + time + '\'' +
                 '}';
     }

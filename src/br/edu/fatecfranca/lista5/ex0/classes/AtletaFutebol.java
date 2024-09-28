@@ -3,11 +3,11 @@ package br.edu.fatecfranca.lista5.classes;
 import br.edu.fatecfranca.lista5.interfaces.JogadorFutebol;
 
 public class AtletaFutebol implements JogadorFutebol {
-    public String nome;
+    public String name;
     public String time;
 
     public AtletaFutebol(String nome, String time) {
-        this.nome = nome;
+        this.name = name;
         this.time = time;
     }
 
@@ -15,12 +15,12 @@ public class AtletaFutebol implements JogadorFutebol {
 
     @Override
     public void baterPenalti() {
-        System.out.println(this.nome + " bateu o pênalti! \nÉ gol do " + this.time + ".");
+        System.out.println(this.name + " bateu o pênalti! É gol do " + this.time + ".");
     }
 
     @Override
     public void cobrarEscanteio() {
-        System.out.println(this.nome + " acaba de cobrar um escanteio.");
+        System.out.println(this.name + " acaba de cobrar um escanteio.");
     }
 
     @Override
