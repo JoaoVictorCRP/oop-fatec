@@ -31,7 +31,7 @@ public class Pessoa extends Animal implements Cidadao, Professor, Contribuinte {
 
     @Override
     public void getCPF() {
-        System.out.println("O número de RG de " + this.nome + " é: " + this.cpf);
+        System.out.println("O número do CPF de " + this.nome + " é: " + this.cpf);
     }
 
     @Override

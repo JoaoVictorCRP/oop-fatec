@@ -28,3 +28,11 @@ Java: `Carro.acelerar()` (Isto é, se a classe previamente criada Carro tiver o 
 ## Polimorfismo
 - Se você não incluir um método específico na classe pai, ele não poderá ser aplicado com polimorfismo!
 - Quando uma classe ou método estiver em _itálico_, ela é abstrata
+
+## Interface
+- A interface garante uma base para a implementação de uma classe que irá herdar dela.
+- Por mais que seja parecido com o conceito das _classes abstratas_, as interfaces possuem algumas diferenças:
+  - **Suportam herança múltipla**: isto é, uma classe pode implementar várias interfaces.
+  - **Nunca possuirá atributos**: Interfaces obrigatoriamente não possuem atributos e nem contrutores.
+  - **Só podem conter métodos abstratos**: Enquanto as _classes abstratas_ podem(opcionalmente) conter métodos concretos.
+  
