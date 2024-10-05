@@ -1,23 +1,18 @@
 package br.edu.fatecfranca.lista5.ex3;
 
-import br.edu.fatecfranca.lista5.ex3.classes.SuperHeroi;
-import br.edu.fatecfranca.lista5.ex3.classes.SuperVilao;
+import br.edu.fatecfranca.lista5.ex3.classes.Condutor;
+import br.edu.fatecfranca.lista5.ex3.classes.CondutorAdapter;
 
 public class Main {
     public static void main(String[] args) {
-        SuperHeroi batman = new SuperHeroi("Bruce Wayne", "Batman");
-        SuperVilao coringa = new SuperVilao("Coringa");
+        Condutor condutorNormal1 = new Condutor("Cássio", 45);
+        Condutor condutorNormal2 = new Condutor("João Victor", 20);
 
-        coringa.ameacarInocentes();
-        coringa.roubarBanco();
-        coringa.correr();
+        CondutorAdapter condutorAdaptado1 = new CondutorAdapter(condutorNormal1);
+        CondutorAdapter condutorAdaptado2 = new CondutorAdapter(condutorNormal2);
 
-        batman.transformar();
-        batman.correr();
-
-        batman.lutar();
-        coringa.lutar();
-        batman.derrotarVilao(coringa); // POLIMORFISMO: coringa será lido como Humano
-        batman.salvarODia();
+        condutorAdaptado1.dirigir();
+        condutorAdaptado2.dirigir(); // Por baixo dos panos, ele na verdade está chamando o método conduzir da classe Condutor
+        System.out.println();
     }
 }
