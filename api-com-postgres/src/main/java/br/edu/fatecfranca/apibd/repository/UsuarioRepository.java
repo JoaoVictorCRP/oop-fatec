@@ -5,5 +5,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 //                                                    <OBJ,Chave primária>
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     // Esta interface terá as operações de CRUD com a entidade Usuário
-
 }

@@ -3,7 +3,7 @@ package br.edu.fatecfranca.apibd.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@Data
+@Data // Gera automaticamente os getters e setters :)
 @Entity
 @Table(name="tb_usuario")
 public class Usuario {
