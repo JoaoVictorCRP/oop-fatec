@@ -20,7 +20,7 @@ public class UsuarioService {
     public Usuario save(UsuarioDTO usuario){ // Quando estamos lidando com dados que vieram de um usuário, precisamos usar o DTO.
         Usuario novoUsuario = new Usuario();
         novoUsuario.setNome(usuario.getNome());
-        novoUsuario.setPassword(usuario.getPassword());
+        novoUsuario.setPassword(usuario.getPassword()); // TODO: CONSERTAR ERRO DE TIPAGEM
         novoUsuario.setUsername(usuario.getUsername());
         return usuarioRepository.save(novoUsuario);
     }
