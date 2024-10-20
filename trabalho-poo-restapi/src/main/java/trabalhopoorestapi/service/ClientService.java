@@ -1,10 +1,11 @@
-package trabalhopoorestapi;
+package trabalhopoorestapi.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import trabalhopoorestapi.model.Cliente;
 import trabalhopoorestapi.repository.ClienteRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import java.sql.*;
+import java.util.List;
 
 @Service
 public class ClientService {
@@ -21,6 +22,10 @@ public class ClientService {
         if(this.conn != null && !this.conn.isClosed()) {
             this.conn.close();
         }
+    }
+
+    public List<Cliente> listAll(){
+        return clienteRepository.findAll();
     }
 
     public Cliente insert(Cliente cliente){

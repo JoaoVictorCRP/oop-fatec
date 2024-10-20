@@ -9,9 +9,8 @@ import  lombok.Data;
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String email;
-    private String telefone;
-
+    public Long id;
+    public String name;
+    public String email;
+    public String telefone;
 }
