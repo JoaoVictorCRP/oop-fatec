@@ -6,6 +6,7 @@ import trabalhopoorestapi.repository.ClienteRepository;
 
 import java.sql.*;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClientService {
@@ -28,14 +29,23 @@ public class ClientService {
         return clienteRepository.findAll();
     }
 
+    public Optional<Cliente> findById(Long id){
+        return clienteRepository.findById(id);
+    };
+
     public Cliente insert(Cliente cliente){
         return clienteRepository.save(cliente);
     }
 
-    public void update(Long id, Cliente cliente){
+    public Cliente update(Long id, Cliente cliente){
         if(clienteRepository.findById(id).isPresent()){
-            clienteRepository.save(cliente);
+            Cliente c = clienteRepository.findById(id).get();
+            c.setName(cliente.getName());
+            c.setEmail(cliente.getEmail());
+            c.setTelefone(cliente.getTelefone());
+            return clienteRepository.save(c);
         }
+        return null;
     }
 
     public void delete(Long id){
