@@ -40,11 +40,13 @@ public class UsuarioService {
     public void update(Long id, UsuarioDTO usuario) {
         if (usuarioRepository.findById(id).isPresent()) {
             Usuario novoUsuario = new Usuario();
-            novoUsuario.setId(usuario.getId());
+            novoUsuario.setId(id);
             novoUsuario.setName(usuario.getName());
             novoUsuario.setPassword(usuario.getPassword());
             novoUsuario.setUsername(usuario.getUsername());
             usuarioRepository.save(novoUsuario); // Save também serve para atualizar, DESDE QUE ele tenha a chave primária (Nesse caso, ID)
+        } else {
+            throw new IllegalArgumentException("Usuário não encontrado");
         }
     }
 

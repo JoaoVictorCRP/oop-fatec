@@ -39,15 +39,29 @@ public class UsuarioController {
         Optional<Usuario> query = usuarioService.findById(id);
         return new ResponseEntity<>(query, HttpStatus.OK);
     }
+
     @PostMapping
     private ResponseEntity<?> salvar(@RequestBody Usuario usuario){
         UsuarioDTO usuarioDto = new UsuarioDTO();
-        usuarioDto.setId(usuario.getId());
         usuarioDto.setName(usuario.getName());
         usuarioDto.setUsername(usuario.getUsername());
         usuarioDto.setPassword(usuario.getPassword());
         usuarioService.save(usuarioDto);
         return new ResponseEntity<>(usuarioDto, HttpStatus.CREATED);
+    }
+
+    @PatchMapping("/{id}")
+    private ResponseEntity<?> atualizar(@PathVariable Long id, @RequestBody Usuario usuario){
+        try {
+            UsuarioDTO usuarioDto = new UsuarioDTO();
+            usuarioDto.setName(usuario.getName());
+            usuarioDto.setUsername(usuario.getUsername());
+            usuarioDto.setPassword(usuario.getPassword());
+            usuarioService.update(id, usuarioDto);
+            return new ResponseEntity<>(usuarioDto, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(),HttpStatus.NOT_FOUND);
+        }
     }
 
     @DeleteMapping("/{id}")
