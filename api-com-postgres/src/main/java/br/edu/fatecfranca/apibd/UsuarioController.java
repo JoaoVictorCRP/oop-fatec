@@ -2,7 +2,6 @@ package br.edu.fatecfranca.apibd;
 
 import br.edu.fatecfranca.apibd.dto.UsuarioDTO;
 import br.edu.fatecfranca.apibd.model.Usuario;
-import br.edu.fatecfranca.apibd.repository.UsuarioRepository;
 import br.edu.fatecfranca.apibd.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,8 +16,6 @@ import java.util.Optional;
 public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
-    @Autowired
-    private UsuarioRepository usuarioRepository;
 
     @GetMapping
     private ResponseEntity<List<Usuario>> listarTodos() {
@@ -29,9 +26,9 @@ public class UsuarioController {
     private ResponseEntity<?> buscaPorId(@PathVariable Long id) {
         Optional<Usuario> query = usuarioService.findById(id);
         return query.isPresent() ?
-                new ResponseEntity<>(query.get(), HttpStatus.OK)
-                :
-                new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            new ResponseEntity<>(query.get(), HttpStatus.OK)
+            :
+            new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @GetMapping("/")
@@ -67,7 +64,7 @@ public class UsuarioController {
     @DeleteMapping("/{id}")
     private ResponseEntity<?> deletar(@PathVariable Long id) {
         try {
-            usuarioService.deletar(id);
+            usuarioService.delete(id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);

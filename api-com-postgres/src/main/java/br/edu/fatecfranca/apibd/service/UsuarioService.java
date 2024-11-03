@@ -40,7 +40,6 @@ public class UsuarioService {
     public void update(Long id, UsuarioDTO usuario) {
         if (usuarioRepository.findById(id).isPresent()) {
             Usuario novoUsuario = new Usuario();
-            novoUsuario.setId(id);
             novoUsuario.setName(usuario.getName());
             novoUsuario.setPassword(usuario.getPassword());
             novoUsuario.setUsername(usuario.getUsername());
@@ -51,7 +50,7 @@ public class UsuarioService {
     }
 
     // Exclusão --> DELETE
-    public void deletar(Long id) {
+    public void delete(Long id) {
         if (usuarioRepository.existsById(id)) {
             usuarioRepository.deleteById(id);
         } else {
